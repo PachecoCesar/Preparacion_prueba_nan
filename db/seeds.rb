@@ -5,3 +5,17 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Person.destroy_all
+Project.destroy_all
+
+20.times do |i|
+Person.create(
+ name: Faker::Name.name
+)
+end
+
+20.times do |i|
+Project.create(
+ project_name: Faker::Company.industry
+)
+end
